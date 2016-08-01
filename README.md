@@ -27,7 +27,6 @@ CTA will inject three commands in your application's package.json, shown as belo
 * A `mocha` and `mocha-co` based test framework.
 * Compile client side code with webpack and babel.
 * Hot reload in `development` mode.
-* Build documents with `gitbook`.
 
 ## Which does not contains
 
