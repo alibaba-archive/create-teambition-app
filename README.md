@@ -2,6 +2,9 @@
 
 Command alias for creating teambition's application.
 
+[![NPM version][npm-image]][npm-url]
+[![Build Status][travis-image]][travis-url]
+
 ## How to use
 
 ```bash
@@ -36,3 +39,9 @@ CTA will inject three commands in your application's package.json, shown as belo
 ## LICENSE
 
 MIT
+
+[npm-url]: https://npmjs.org/package/create-teambition-app
+[npm-image]: http://img.shields.io/npm/v/create-teambition-app.svg
+
+[travis-url]: https://travis-ci.org/sailxjx/create-teambition-app
+[travis-image]: http://img.shields.io/travis/sailxjx/create-teambition-app.svg
