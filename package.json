@@ -1,6 +1,6 @@
 {
   "name": "create-teambition-app",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Create teambition application in one command",
   "main": "index.js",
   "engines": {
