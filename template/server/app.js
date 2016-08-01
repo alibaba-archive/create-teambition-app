@@ -27,7 +27,7 @@ locale(app, 'lang')
 // 加载中间件
 app.use(require('koa-logger')())
 // 优先加载静态文件
-app.use(require('koa-static')(path.join(__dirname, '../static')))
+app.use(mount('/static', require('koa-static')(path.join(__dirname, '../static'))))
 
 app.use(bodyParser())
 app.use(i18n(app, {

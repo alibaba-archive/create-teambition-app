@@ -5,6 +5,7 @@ initial_path=$PWD
 
 function prepare {
   echo 'Preparing.'
+  rm -rf $initial_path/template/build
 }
 
 function cleanup {
@@ -53,9 +54,6 @@ grep -q 'test-app' package.json
 test -e .babelrc
 test -e app.js
 test -e node_modules
-# 
-# # Test `start`
-# npm start -- --smoke-test
 
 # Test `test`
 npm test
@@ -65,9 +63,11 @@ npm run build
 
 # Check for expected output
 test -e build/*.html
+test -e build/static/favicon.ico
 test -e build/static/js/*.js
+test -e build/static/js/*.js.map
 test -e build/static/css/*.css
-test -e build/static/media/*.svg
+test -e build/static/css/*.css.map
 
 # Cleanup
 cleanup

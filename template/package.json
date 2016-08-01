@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node app.js",
     "static": "NODE_ENV=static node app.js",
-    "build": "rm -rf build && cp -rf static build && NODE_ENV=production node tools/build.js",
+    "build": "rm -rf build && mkdir -p build && cp -rf static build/ && NODE_ENV=production node tools/build.js",
     "test": "NODE_ENV=test istanbul cover ./node_modules/.bin/_mocha -- -r co-mocha -r should -R spec test/main.js"
   },
   "keywords": [
