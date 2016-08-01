@@ -9,6 +9,10 @@
   "scripts": {
     "test": "tasks/e2e.sh"
   },
+  "bin": {
+    "create-teambition-app": "./bin/create-teambition-app.js",
+    "cta": "./bin/cta.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/teambition/create-teambition-app.git"

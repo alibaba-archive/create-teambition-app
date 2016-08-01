@@ -32,6 +32,7 @@ CTA will inject three commands in your application's package.json, shown as belo
 ## Which does not contains
 
 * Deploy your code to cdn or remote server, you can try [sneaky](https://github.com/teambition/sneaky) to deploy your application.
+* Database connection, you can try [mongoose](https://github.com/Automattic/mongoose) and [limbo](https://github.com/teambition/limbo) if you use mongodb.
 
 ## LICENSE
 

@@ -51,10 +51,21 @@ cd test-app
 # Test project structure
 test -e package.json
 grep -q 'test-app' package.json
+test -e .babelrc
 test -e app.js
 test -e node_modules
 
-# Test build
+# Test the server
+npm start -- --smoke-test
+
+# Test local build command
+npm run build
+
+# Check for expected output
+test -e build/*.html
+test -e build/static/js/*.js
+test -e build/static/css/*.css
+test -e build/static/media/*.svg
 
 # Cleanup
 cleanup
