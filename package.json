@@ -1,0 +1,34 @@
+{
+  "name": "create-teambition-app",
+  "version": "0.0.1",
+  "description": "Create teambition application in one command",
+  "main": "index.js",
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "tasks/e2e.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teambition/create-teambition-app.git"
+  },
+  "keywords": [
+    "teambition",
+    "app"
+  ],
+  "author": "teambition",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/teambition/create-teambition-app/issues"
+  },
+  "homepage": "https://github.com/teambition/create-teambition-app#readme",
+  "devDependencies": {
+    "standard": "^7.1.2"
+  },
+  "dependencies": {
+    "cross-spawn": "^4.0.0",
+    "fs-extra": "^0.30.0",
+    "minimist": "^1.2.0"
+  }
+}
