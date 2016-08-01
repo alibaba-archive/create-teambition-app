@@ -3,5 +3,7 @@
   // Global prefix
   prefix: '/',
   // Use webpack.dev.conf.js
-  dev: true
+  dev: true,
+  // Serv local build files
+  static: false
 }

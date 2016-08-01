@@ -5,7 +5,6 @@ var merge = require('webpack-merge')
 var baseWebpackConfig = require('./webpack.base.conf')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
-var webConfig = utils.formWebConfig(require('config'))
 
 module.exports = merge(baseWebpackConfig, {
   module: {
@@ -46,21 +45,7 @@ module.exports = merge(baseWebpackConfig, {
     new HtmlWebpackPlugin({
       filename: config.build.assetsRoot + '/index.html',
       template: 'index.ejs',
-      config: webConfig,
-      inject: false,
-      minify: {
-        removeComments: true,
-        collapseWhitespace: true,
-        removeAttributeQuotes: true
-        // more options:
-        // https://github.com/kangax/html-minifier#options-quick-reference
-      }
-    }),
-    new HtmlWebpackPlugin({
-      filename: config.build.assetsRoot + '/cms.html',
-      template: 'cms.ejs',
-      config: webConfig,
-      inject: false,
+      inject: true,
       minify: {
         removeComments: true,
         collapseWhitespace: true,
