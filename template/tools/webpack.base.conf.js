@@ -1,13 +1,13 @@
-var path = require('path')
-var config = require('./config')
-var utils = require('./utils')
-var projectRoot = path.resolve(__dirname, '../')
-var autoprefixer = require('autoprefixer')
+'use strict'
+const path = require('path')
+const autoprefixer = require('autoprefixer')
+let config = require('./config')
+let utils = require('./utils')
+let projectRoot = path.resolve(__dirname, '../')
 
 module.exports = {
   entry: {
-    app: './client/main.js',
-    cms: './client/cms.js'
+    app: './client/main.js'
   },
   output: {
     path: path.join(config.build.assetsRoot, config.build.assetsPublicPath),

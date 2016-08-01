@@ -1,16 +1,19 @@
-var webpack = require('webpack')
-var merge = require('webpack-merge')
-var utils = require('./utils')
-var baseWebpackConfig = require('./webpack.base.conf')
-var HtmlWebpackPlugin = require('html-webpack-plugin')
-var webConfig = utils.formWebConfig(require('config'))
-
-// add hot-reload related code to entry chunks
-Object.keys(baseWebpackConfig.entry).forEach(function (name) {
-  baseWebpackConfig.entry[name] = ['./scripts/dev-client'].concat(baseWebpackConfig.entry[name])
-})
+'use strict'
+const path = require('path')
+const config = require('config')
+const webpack = require('webpack')
+const merge = require('webpack-merge')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+let utils = require('./utils')
+let baseWebpackConfig = require('./webpack.base.conf')
 
 module.exports = merge(baseWebpackConfig, {
+  entry: {
+    app: [
+      `webpack-hot-middleware/client?path=${path.join(config.prefix, '/__webpack_hmr&noInfo=true&reload=true')}`,
+      baseWebpackConfig.entry.app
+    ]
+  },
   module: {
     loaders: utils.styleLoaders()
   },
@@ -28,14 +31,7 @@ module.exports = merge(baseWebpackConfig, {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'index.ejs',
-      config: webConfig,
-      inject: false
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'cms.html',
-      template: 'cms.ejs',
-      config: webConfig,
-      inject: false
+      inject: true
     })
   ]
 })

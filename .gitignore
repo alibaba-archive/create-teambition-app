@@ -16,7 +16,7 @@ results
 npm-debug.log
 node_modules
 /tmp
-/coverage
+coverage/
 *.orig
 
 _book/

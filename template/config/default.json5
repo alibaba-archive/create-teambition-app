@@ -1,0 +1,7 @@
+{
+  port: 3000,
+  // Global prefix
+  prefix: '/',
+  // Use webpack.dev.conf.js
+  dev: true
+}
