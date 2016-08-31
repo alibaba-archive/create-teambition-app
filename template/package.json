@@ -67,6 +67,7 @@
     "vue-router": "^0.7.13",
     "vue-style-loader": "^1.0.0",
     "webpack": "^1.13.1",
+    "webpack-hot-middleware": "^2.12.2",
     "webpack-merge": "^0.14.1"
   }
 }
