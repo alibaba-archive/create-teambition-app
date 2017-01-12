@@ -1,5 +1,9 @@
 'use strict'
+import Vue from 'vue'
 import App from './app'
 import router from './router'
 
-router.start(App, '#app')
+new Vue({
+  router,
+  render: h => h(App)
+}).$mount('#app')

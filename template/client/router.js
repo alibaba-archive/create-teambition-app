@@ -1,21 +1,16 @@
 'use strict'
 import Vue from 'vue'
 import Router from 'vue-router'
+
 import Index from './components/index'
 
 Vue.use(Router)
 
-const router = new Router({
-  history: true,
-  root: '/',
-  saveScrollPosition: true
-})
+const routes = [
+  { path: '/', name: 'index', component: Index }
+]
 
-router.map({
-  '/': {
-    name: 'index',
-    component: Index
-  }
+export default new Router({
+  mode: 'history',
+  routes: routes
 })
-
-export default router
