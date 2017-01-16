@@ -43,5 +43,5 @@ MIT
 [npm-url]: https://npmjs.org/package/create-teambition-app
 [npm-image]: http://img.shields.io/npm/v/create-teambition-app.svg
 
-[travis-url]: https://travis-ci.org/sailxjx/create-teambition-app
-[travis-image]: http://img.shields.io/travis/sailxjx/create-teambition-app.svg
+[travis-url]: https://travis-ci.org/teambition/create-teambition-app
+[travis-image]: http://img.shields.io/travis/teambition/create-teambition-app.svg
